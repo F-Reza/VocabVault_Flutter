@@ -11,12 +11,8 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.8
   sqflite:
-  path_provider:
-  just_audio:
-  file_picker:
   path:
-  audioplayers:
-  flutter_native_splash:
+  path_provider:
   shared_preferences:
 
 dev_dependencies:
