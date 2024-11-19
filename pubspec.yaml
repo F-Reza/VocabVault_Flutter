@@ -16,6 +16,8 @@ dependencies:
   file_picker:
   path:
   audioplayers:
+  flutter_native_splash:
+  shared_preferences:
 
 dev_dependencies:
   flutter_test:

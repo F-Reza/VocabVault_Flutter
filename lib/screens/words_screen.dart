@@ -5,7 +5,7 @@ import '../models/vocabulary_model.dart';
 class WordsScreen extends StatelessWidget {
   final String category;
 
-  WordsScreen({required this.category});
+  const WordsScreen({super.key, required this.category});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class WordsScreen extends StatelessWidget {
         future: DatabaseHelper.instance.getWordsByCategory(category),
         builder: (context, snapshot) {
           if (!snapshot.hasData) {
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           }
 
           final words = snapshot.data!;
@@ -28,7 +28,7 @@ class WordsScreen extends StatelessWidget {
                 title: Text(word.word),
                 subtitle: Text(word.meaning),
                 trailing: IconButton(
-                  icon: Icon(Icons.volume_up),
+                  icon: const Icon(Icons.volume_up),
                   onPressed: () {
                     // Play pronunciation audio
                   },

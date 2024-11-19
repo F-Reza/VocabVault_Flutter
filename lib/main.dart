@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-
 import 'db/db_helper.dart';
-import 'screens/home_screen.dart';
+import 'screens/index_screen.dart';
 //FCB960
-void main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  await DatabaseHelper.instance.populateDatabase();
+  //await DatabaseHelper.instance.populateDatabase();
   runApp(const MyApp());
 }
 
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      home: HomeScreen(),
+      home: const IndexScreen(),
     );
   }
 }
